@@ -44,6 +44,12 @@
         .navMenu a:hover {
             color: #d09c0b;
         }
+
+        iframe {
+            width: 100%;
+            height: calc(100vh - 50px); /* Ajuste a altura conforme necessário */
+            border: none;
+        }
     </style>
 </head>
 
@@ -54,19 +60,17 @@
         <a id="Conteúdo" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Conteúdo</a>
     </nav>
 
-    <script>
-        let direction = "vertical";
-        if (direction === "vertical") {
-            document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
-        }
+    <iframe id="contentFrame" src="https://www.notion.so/Marketing-Hub-440184f64a274699832893581c660a2c?pvs=4"></iframe>
 
+    <script>
         function navigate(id) {
+            const frame = document.getElementById('contentFrame');
             if (id == 'home')
-                window.location.href = "https://www.notion.so/Marketing-Hub-440184f64a274699832893581c660a2c?pvs=4";
+                frame.src = "https://www.notion.so/Marketing-Hub-440184f64a274699832893581c660a2c?pvs=4";
             else if (id == "Onboarding")
-                window.location.href = "https://www.notion.so/3b0b642a70ef4a8ea008de06b524dc43?v=ae25702299434236b2ca5a8ffde74cf6&pvs=4";
+                frame.src = "https://www.notion.so/3b0b642a70ef4a8ea008de06b524dc43?v=ae25702299434236b2ca5a8ffde74cf6&pvs=4";
             else if (id == "Conteúdo")
-                window.location.href = "https://www.notion.so/7d0f20e63bab45e2bee90cb29e0cf38e?v=2a05515c4fe648fb99dc7f8055a3e864&pvs=4";
+                frame.src = "https://www.notion.so/7d0f20e63bab45e2bee90cb29e0cf38e?v=2a05515c4fe648fb99dc7f8055a3e864&pvs=4";
         }
     </script>
 </body>
