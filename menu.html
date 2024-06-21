@@ -90,6 +90,26 @@
             else if (id == "Conteúdo")
                 frame.src = "https://www.notion.so/7d0f20e63bab45e2bee90cb29e0cf38e?v=2a05515c4fe648fb99dc7f8055a3e864&pvs=4";
         }
+
+        // Força a exibição vertical do menu
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.head.insertAdjacentHTML("beforeend", `
+                <style>
+                    .navMenu a {
+                        display: block; 
+                        text-align: left; 
+                        margin: 7px;
+                    }
+                    i {
+                        width: 15px; 
+                        margin-right: 5px;
+                    }
+                    .navMenu {
+                        margin: 3px;
+                    }
+                </style>
+            `);
+        });
     </script>
 </body>
 
