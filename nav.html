@@ -2,94 +2,73 @@
 <html>
 
 <head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <!-------->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
 
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        .navMenu {
+            font-family: 'Advent Pro', sans-serif;
+            padding: 8px;
+            text-align: center;
+            margin: 7px auto;
+            width: fit-content;
+        }
 
-	<!-- Google Font -->
+        .navMenu a {
+            color: #272727;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 6px;
+        }
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+        .background {
+            background-color: #ece5f0;
+        }
 
-	<!-------->
+        .border {
+            border: 1px solid #cccccc;
+        }
 
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-		}
-
-
-		.navMenu {
-			font-family: 'Advent Pro', sans-serif;
-			padding: 8px;
-			text-align: center;
-			margin: 7px auto;
-			width: fit-content;
-		}
-
-		.navMenu a {
-			color: #272727;
-			text-decoration: none;
-			text-transform: uppercase;
-			display: inline-block;
-			padding: 6px;
-		}
-
-		.background {
-			background-color: #ece5f0;
-		}
-
-		.border {
-			border: 1px solid #cccccc;
-
-		}
-
-		.navMenu a:hover {
-
-			color: #d09c0b;
-		}
-	</style>
+        .navMenu a:hover {
+            color: #d09c0b;
+        }
+    </style>
 </head>
 
 <body>
+    <nav class="navMenu border">
+        <a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+        <a id="Onboarding" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Onboarding</a>
+        <a id="Conteúdo" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Conteúdo</a>
+    </nav>
 
-	<nav class="navMenu  border">
-		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
-		<a id="Onboarding" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Onboarding</a>
-		<a id="Conteúdo" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Conteúdo</a>
-		
+    <script>
+        let direction = "vertical";
+        if (direction === "vertical") {
+            document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+        }
 
-
-
-	</nav>
-
-
-	<script>
-
-		let direction = "vertical";
-		if (direction === "vertical") {
-			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
-		}
-
-
-		function navigate(id) {
-
-			if (id == 'home')
-				window.open("https://www.notion.so/Marketing-Hub-440184f64a274699832893581c660a2c?pvs=4", '_blank').focus();
-			else if (id == "Onboarding")
-				window.open("https://www.notion.so/3b0b642a70ef4a8ea008de06b524dc43?v=ae25702299434236b2ca5a8ffde74cf6&pvs=4", '_blank').focus();
-			else if (id == "Conteúdo")
-				window.open("https://www.notion.so/7d0f20e63bab45e2bee90cb29e0cf38e?v=2a05515c4fe648fb99dc7f8055a3e864&pvs=4", '_blank').focus();
-			
-
-		}
-	</script>
-
-
+        function navigate(id) {
+            if (id == 'home')
+                window.location.href = "https://www.notion.so/Marketing-Hub-440184f64a274699832893581c660a2c?pvs=4";
+            else if (id == "Onboarding")
+                window.location.href = "https://www.notion.so/3b0b642a70ef4a8ea008de06b524dc43?v=ae25702299434236b2ca5a8ffde74cf6&pvs=4";
+            else if (id == "Conteúdo")
+                window.location.href = "https://www.notion.so/7d0f20e63bab45e2bee90cb29e0cf38e?v=2a05515c4fe648fb99dc7f8055a3e864&pvs=4";
+        }
+    </script>
 </body>
 
 </html>
