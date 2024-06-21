@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <!-------->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .navMenu {
+            font-family: 'Advent Pro', sans-serif;
+            padding: 8px;
+            text-align: center;
+            margin: 7px auto;
+            width: fit-content;
+        }
+
+        .navMenu a {
+            color: #272727;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 6px;
+        }
+
+        .background {
+            background-color: #ece5f0;
+        }
+
+        .border {
+            border: 1px solid #cccccc;
+        }
+
+        .navMenu a:hover {
+            color: #d09c0b;
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100vh - 50px); /* Ajuste a altura conforme necessário */
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navMenu border">
+        <a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+        <a id="Onboarding" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Onboarding</a>
+        <a id="Conteúdo" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Conteúdo</a>
+    </nav>
+
+    <iframe id="contentFrame" src="https://www.notion.so/Marketing-Hub-440184f64a274699832893581c660a2c?pvs=4"></iframe>
+
+    <script>
+        function navigate(id) {
+            const frame = document.getElementById('contentFrame');
+            if (id == 'home')
+                frame.src = "https://www.notion.so/Marketing-Hub-440184f64a274699832893581c660a2c?pvs=4";
+            else if (id == "Onboarding")
+                frame.src = "https://www.notion.so/3b0b642a70ef4a8ea008de06b524dc43?v=ae25702299434236b2ca5a8ffde74cf6&pvs=4";
+            else if (id == "Conteúdo")
+                frame.src = "https://www.notion.so/7d0f20e63bab45e2bee90cb29e0cf38e?v=2a05515c4fe648fb99dc7f8055a3e864&pvs=4";
+        }
+    </script>
+</body>
+
+</html>
