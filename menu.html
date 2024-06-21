@@ -20,18 +20,16 @@
         .navMenu {
             font-family: 'Advent Pro', sans-serif;
             padding: 8px;
-            text-align: left;
+            text-align: center;
             margin: 7px auto;
             width: fit-content;
-            display: flex;
-            flex-direction: column; /* Mantém o menu na vertical */
         }
 
         .navMenu a {
             color: #272727;
             text-decoration: none;
             text-transform: uppercase;
-            display: block; /* Garante que os itens do menu sejam exibidos como blocos */
+            display: inline-block;
             padding: 6px;
         }
 
@@ -91,8 +89,8 @@
                 frame.src = "https://www.notion.so/7d0f20e63bab45e2bee90cb29e0cf38e?v=2a05515c4fe648fb99dc7f8055a3e864&pvs=4";
         }
 
-        // Força a exibição vertical do menu
-        document.addEventListener('DOMContentLoaded', (event) => {
+        let direction = "vertical";
+        if (direction === "vertical") {
             document.head.insertAdjacentHTML("beforeend", `
                 <style>
                     .navMenu a {
@@ -109,7 +107,7 @@
                     }
                 </style>
             `);
-        });
+        }
     </script>
 </body>
 
