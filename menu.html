@@ -1,76 +1,74 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Navegação Notion</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
-    <!-------->
     <style>
-        * {
-            margin: 0;
+        body {
+            font-family: 'Advent Pro', sans-serif;
             padding: 0;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+            margin: 0;
         }
 
         .navMenu {
-            font-family: 'Advent Pro', sans-serif;
+            background-color: #ece5f0;
             padding: 8px;
             text-align: left;
-            margin: 7px auto;
-            width: fit-content;
-            display: flex;
-            flex-direction: column; /* Mantém o menu na vertical */
+            width: 200px;
+            margin: 10px;
         }
 
         .navMenu a {
             color: #272727;
             text-decoration: none;
             text-transform: uppercase;
-            display: block; /* Garante que os itens do menu sejam exibidos como blocos */
+            display: block;
             padding: 6px;
-        }
-
-        .background {
-            background-color: #ece5f0;
-        }
-
-        .border {
-            border: 1px solid #cccccc;
+            transition: color 0.3s ease;
         }
 
         .navMenu a:hover {
             color: #d09c0b;
         }
+
+        iframe {
+            width: calc(100vw - 220px); /* Ajusta a largura do iframe para que não haja rolagem horizontal */
+            height: calc(100vh - 20px); /* Ajusta a altura do iframe */
+            border: none;
+            margin: 10px;
+        }
+
+        .container {
+            display: flex;
+        }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="navMenu border menu">
-            <a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
-            <a id="Onboarding" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Onboarding</a>
-            <a id="Conteúdo" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Conteúdo</a>
-        </nav>
-    </div>
 
-    <script>
-        function navigate(id) {
-            let url;
-            if (id === 'home') {
-                url = "https://www.notion.so/Marketing-Hub-440184f64a274699832893581c660a2c?pvs=4";
-            } else if (id === "Onboarding") {
-                url = "https://www.notion.so/3b0b642a70ef4a8ea008de06b524dc43?v=ae25702299434236b2ca5a8ffde74cf6&pvs=4";
-            } else if (id === "Conteúdo") {
-                url = "https://www.notion.so/7d0f20e63bab45e2bee90cb29e0cf38e?v=2a05515c4fe648fb99dc7f8055a3e864&pvs=4";
-            }
-            window.location.href = url;
-        }
-    </script>
+<div class="container">
+    <nav class="navMenu">
+        <a id="home" onclick="navigate('Marketing-Hub-440184f64a274699832893581c660a2c')"> <i class="fa-solid fa-house"></i> Home</a>
+        <a id="onboarding" onclick="navigate('3b0b642a70ef4a8ea008de06b524dc43')"> <i class="fa-solid fa-briefcase"></i> Onboarding</a>
+        <a id="conteudo" onclick="navigate('7d0f20e63bab45e2bee90cb29e0cf38e')"> <i class="fa-solid fa-calendar-week"></i> Conteúdo</a>
+    </nav>
+
+    <iframe id="contentFrame" src="https://www.notion.so/Marketing-Hub-440184f64a274699832893581c660a2c?pvs=4"></iframe>
+</div>
+
+<script>
+    function navigate(pageId) {
+        const frame = document.getElementById('contentFrame');
+        const url = `https://www.notion.so/${pageId}?pvs=4`;
+        frame.src = url;
+    }
+</script>
+
 </body>
-
 </html>
