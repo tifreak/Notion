@@ -37,6 +37,10 @@
       color: #7a7a7a
     }
 
+    .social img {
+      width: 1em;
+      height: 1em;
+    }
 
     .blog:hover {
       color: #ffbd2f;
@@ -93,87 +97,57 @@
 
 <body>
 
-  <body>
-
-    <div class="wrapper">
-
-     <div id="ifood" onclick="navigate(this.id)" class="social">
-  <span class="icon ifood"><i class="fa-solid fa-brands fa-ifood"></i></span>
-</div>
-<script>
-  function navigate(elementId) {
-    if (elementId === "ifood") {
-      window.location.href = "https://blog-parceiros.ifood.com.br/wp-content/uploads/2022/02/avatar-ifood-1.png";
-    }
-  }
-</script>
-
-      <!-- Start facebook Icon -->
-      <div id="facebook" onclick="navigate(this.id)" class="social">
-        <span class="icon facebook"><i class="fab fa-facebook"></i></span>
-      </div>
-      <!-- End facebook Icon -->
-
-      <!-- Start instagram Icon -->
-      <div id="instagram" onclick="navigate(this.id)" class="social">
-        <span class="icon instagram"><i class="fab fa-instagram"></i></span>
-      </div>
-      <!-- End instagram Icon -->
-
-      <!-- Start linkedin Icon -->
-      <div id="linkedin" onclick="navigate(this.id)" class="social">
-        <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
-      </div>
-      <!-- End linkedin Icon -->
-
-      <!-- Start tiktok Icon -->
-      <div id="tiktok" onclick="navigate(this.id)" class="social">
-        <span class="icon tiktok"><i class="fab fa-tiktok"></i></span>
-      </div>
-      <!-- End tiktok Icon -->
-
-      <!-- Start youtube Icon -->
-      <div id="youtube" onclick="navigate(this.id)" class="social">
-        <span class="icon youtube"><i class="fab fa-youtube"></i></span>
-      </div>
-      <!-- End youtube Icon -->
-
-
+  <div class="wrapper">
+    <!-- iFood Icon -->
+    <div id="ifood" onclick="navigate(this.id)" class="social">
+      <span class="icon ifood">
+        <img src="https://blog-parceiros.ifood.com.br/wp-content/uploads/2022/02/avatar-ifood-1.png" alt="iFood Icon">
+      </span>
     </div>
 
+    <!-- Facebook Icon -->
+    <div id="facebook" onclick="navigate(this.id)" class="social">
+      <span class="icon facebook"><i class="fab fa-facebook"></i></span>
+    </div>
 
+    <!-- Instagram Icon -->
+    <div id="instagram" onclick="navigate(this.id)" class="social">
+      <span class="icon instagram"><i class="fab fa-instagram"></i></span>
+    </div>
 
+    <!-- LinkedIn Icon -->
+    <div id="linkedin" onclick="navigate(this.id)" class="social">
+      <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
+    </div>
 
-    <script>
-      function navigate(id) {
+    <!-- TikTok Icon -->
+    <div id="tiktok" onclick="navigate(this.id)" class="social">
+      <span class="icon tiktok"><i class="fab fa-tiktok"></i></span>
+    </div>
 
-        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
+    <!-- YouTube Icon -->
+    <div id="youtube" onclick="navigate(this.id)" class="social">
+      <span class="icon youtube"><i class="fab fa-youtube"></i></span>
+    </div>
+  </div>
 
-        if (id === "ifood")
-          window.open("https://www.ifood.com.br/delivery/goiania-go/kintaru-sushi---bela-vista-setor-bela-vista/a7a73917-c62e-4a41-aa5f-f99ba2a45699", '_blank').focus(); //Add the url to your blog
+  <script>
+    function navigate(id) {
+      if (id === "ifood")
+        window.open("https://www.ifood.com.br/delivery/goiania-go/kintaru-sushi---bela-vista-setor-bela-vista/a7a73917-c62e-4a41-aa5f-f99ba2a45699", '_blank').focus();
+      else if (id === "facebook")
+        window.open("https://facebook.com/kintarudelivery", '_blank').focus();
+      else if (id === "instagram")
+        window.open("https://www.instagram.com/kintarusushi/", '_blank').focus();
+      else if (id === "linkedin")
+        window.open("https://www.linkedin.com/in/kintaru-delivery-55b53a227/?originalSubdomain=br/", '_blank').focus();
+      else if (id === "tiktok")
+        window.open("https://www.tiktok.com/@kintarusushi", '_blank').focus();
+      else if (id === "youtube")
+        window.open("https://www.youtube.com/@kintarudelivery9803/", '_blank').focus();
+    }
+  </script>
 
-        else if (id === "facebook") {
-          window.open("https://facebook.com/kintarudelivery", '_blank').focus(); //Add the url to your facebook page or account
-        }
-        else if (id === "instagram") {
-          window.open("https://www.instagram.com/kintarusushi/", '_blank').focus(); //Add the url to your instagram account
-        }
-        else if (id === "linkedin") {
-          window.open("https://www.linkedin.com/in/kintaru-delivery-55b53a227/?originalSubdomain=br/", '_blank').focus(); //Add the url to your pinterest account
-        }
-        else if (id === "tiktok") {
-          window.open("https://www.tiktok.com/@kintarusushi", '_blank').focus(); //Add the url to your tiktok account
-        }
-        else if (id === "youtube") {
-          window.open("https://www.youtube.com/@kintarudelivery9803/", '_blank').focus(); //Add the url to your youtube account
-        }
-       
-      }
-
-    </script>
-
-
-
-  </body>
+</body>
 
 </html>
