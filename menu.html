@@ -57,11 +57,10 @@
 
 <body>
 
-	
 	<nav class="navMenu  border">
 		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
-		<a id="Onboarding" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Onboarding</a>
-		<a id="Conteúdo" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Conteúdo</a>
+		<a id="onboarding" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Orboarding</a>
+		
 
 
 
@@ -78,13 +77,13 @@
 
 		function navigate(id) {
 
-			if (id == 'home')
-				window.open("https://www.notion.so/Marketing-Hub-440184f64a274699832893581c660a2c?pvs=4", '_blank').focus();
-			else if (id == "Onboarding")
-				window.open("https://www.notion.so/3b0b642a70ef4a8ea008de06b524dc43?v=ae25702299434236b2ca5a8ffde74cf6&pvs=4", '_blank').focus();
-			else if (id == "Conteúdo")
-				window.open("https://www.notion.so/7d0f20e63bab45e2bee90cb29e0cf38e?v=2a05515c4fe648fb99dc7f8055a3e864&pvs=4", '_blank').focus();
+			if (id == 'home') {
+    				window.open("https://www.notion.so/Marketing-Hub-440184f64a274699832893581c660a2c?pvs=3", '_self').focus();
+		}
 
+			else if (id == "onboarding")
+				window.open("https://www.notion.so/3b0b642a70ef4a8ea008de06b524dc43?v=ae25702299434236b2ca5a8ffde74cf6&pvs=3", '_self').focus();
+		
 		}
 	</script>
 
