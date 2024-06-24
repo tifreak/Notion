@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
 	<!-- Google Font -->
-
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
@@ -45,11 +44,9 @@
 
 		.border {
 			border: 1px solid #cccccc;
-
 		}
 
 		.navMenu a:hover {
-
 			color: #d09c0b;
 		}
 	</style>
@@ -57,36 +54,25 @@
 
 <body>
 
-	<nav class="navMenu  border">
+	<nav class="navMenu border">
 		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
-		<a id="onboarding" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Orboarding</a>
-		
-
-
-
+		<a id="onboarding" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Onboarding</a>
 	</nav>
 
-
 	<script>
-
 		let direction = "vertical";
 		if (direction === "vertical") {
-			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`);
 		}
-
 
 		function navigate(id) {
-
 			if (id == 'home') {
-    				window.open("https://www.notion.so/Marketing-Hub-440184f64a274699832893581c660a2c?pvs=3", '_self').focus();
-		}
-
-			else if (id == "onboarding")
-				window.open("https://www.notion.so/3b0b642a70ef4a8ea008de06b524dc43?v=ae25702299434236b2ca5a8ffde74cf6&pvs=3", '_self').focus();
-		
+				window.location.href = "https://www.notion.so/Marketing-Hub-440184f64a274699832893581c660a2c?pvs=3";
+			} else if (id == "onboarding") {
+				window.location.href = "https://www.notion.so/3b0b642a70ef4a8ea008de06b524dc43?v=ae25702299434236b2ca5a8ffde74cf6&pvs=3";
+			}
 		}
 	</script>
-
 
 </body>
 
