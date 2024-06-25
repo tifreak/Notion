@@ -82,6 +82,13 @@
       </span>
     </div>
 
+    <!-- Anota AI -->
+    <div id="anota ai" onclick="navigate(this.id)" class="social">
+      <span class="icon anota ai">
+        <img src="https://admin.anota.ai/assets/logo.png" alt="iFood Icon">
+      </span>
+    </div>
+    
     <!-- Facebook Icon -->
     <div id="facebook" onclick="navigate(this.id)" class="social">
       <span class="icon facebook"><i class="fab fa-facebook"></i></span>
@@ -112,6 +119,8 @@
     function navigate(id) {
       if (id === "ifood")
         window.open("https://www.ifood.com.br/delivery/goiania-go/kintaru-sushi---bela-vista-setor-bela-vista/a7a73917-c62e-4a41-aa5f-f99ba2a45699", '_blank').focus();
+      else if (id === "anota ai")
+        window.open("https://pedido.anota.ai/loja/kintarudelivery?from=site", '_blank').focus();
       else if (id === "facebook")
         window.open("https://facebook.com/kintarudelivery", '_blank').focus();
       else if (id === "instagram")
