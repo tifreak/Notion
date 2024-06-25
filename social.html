@@ -40,13 +40,24 @@
     .social img {
       width: 1em;
       height: 1em;
+      filter: grayscale(100%); /* Define a cor inicial para cinza */
     }
 
+    .ifood img:hover {
+      filter: grayscale(0%); /* Remove o filtro ao passar o mouse */
+    }
+
+    .anota-ai img:hover {
+      filter: grayscale(0%);
+    }
+    
     .ifood:hover {
       color: #ffbd2f;
     }
-    .anota ai:hover {
+
+    .anota-ai:hover {
       color: #25CEFF;
+      
     }
     .facebook:hover {
       color: #4267B2;
@@ -85,8 +96,8 @@
       </span>
     </div>
 
-    <!-- Anota AI -->
-    <div id="anota ai" onclick="navigate(this.id)" class="social">
+    <!-- Anota-AI -->
+    <div id="anota-ai" onclick="navigate(this.id)" class="social">
       <span class="icon anota ai">
         <img src="https://admin.anota.ai/assets/logo.png" alt="iFood Icon">
       </span>
@@ -122,7 +133,7 @@
     function navigate(id) {
       if (id === "ifood")
         window.open("https://www.ifood.com.br/delivery/goiania-go/kintaru-sushi---bela-vista-setor-bela-vista/a7a73917-c62e-4a41-aa5f-f99ba2a45699", '_blank').focus();
-      else if (id === "anota ai")
+      else if (id === "anota-ai")
         window.open("https://pedido.anota.ai/loja/kintarudelivery?from=site", '_blank').focus();
       else if (id === "facebook")
         window.open("https://facebook.com/kintarudelivery", '_blank').focus();
